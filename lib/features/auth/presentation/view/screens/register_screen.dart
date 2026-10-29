@@ -49,7 +49,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Sign up")),
+      appBar: AppBar(title: Center(child: Text("Sign up"))),
       body: BlocListener<RegisterCubit, RegisterState>(
         bloc: cubit,
         listener: (context, state) {
@@ -121,7 +121,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       // Already have an account?
       floatingActionButton: AuthNavigatorWidget(
         text: "Already have an account?",
-        actionText: "Login",
+        actionText: "  Login",
         onTap: () => Navigator.of(context).pushNamed(AppRoutes.login),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
